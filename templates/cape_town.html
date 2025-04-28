@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cape Town</title>
+    <style>
+    body {
+        background-color: lightblue;
+        font-family: Arial, sans-serif;
+        color: #333333;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        text-align: center;
+        padding-top: 30px;
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+    .item {
+        text-align: center;
+        width: 250px;
+    }
+    .item img {
+        width: 100%;
+        height: 180px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+    }
+    .item img:hover {
+        transform: scale(1.05);
+    }
+    .item a {
+        text-decoration: none;
+        color: #222;
+        font-size: 20px;
+        display: block;
+        margin-top: 10px;
+    }
+    .item a:hover {
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>Cape Town</h2>
+    <p>We have the following offerings in Cape Town:</p>
+</div>
+
+<div class="content">
+    <div class="item">
+        <a href="{{ url_for('cape_town_accommodation') }}">
+            <img src="{{ url_for('static', filename='accommodationCapeTown.jpeg') }}" alt="Accommodation">
+            Accommodation
+        </a>
+    </div>
+    <div class="item">
+        <a href="{{ url_for('cape_town_activities') }}">
+            <img src="{{ url_for('static', filename='activitiesCapeTown.jpeg') }}" alt="Activities">
+            Activities
+        </a>
+    </div>
+    <div class="item">
+        <a href="{{ url_for('cape_town_restaurants') }}">
+            <img src="{{ url_for('static', filename='restaurantsCapeTown.jpeg') }}" alt="Restaurants">
+            Restaurants
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

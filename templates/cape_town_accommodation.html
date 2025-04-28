@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accommodation</title>
+    <style>
+    body {
+        background-color: lightblue;
+        font-family: Arial, sans-serif;
+        color: #333333;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        text-align: center;
+        padding-top: 30px;
+    }
+    .place-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        list-style-type: none;
+        padding: 0;
+    }
+    .place-item {
+        margin: 15px 0;
+    }
+    .place-item a {
+        text-decoration: none;
+        color: #222222;
+        font-size: 20px;
+        transition: color 0.3s;
+    }
+    .place-item a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Accommodation</h1>
+    <p>Resting is important when traveling. We have the following places as your home away from home:</p>
+</div>
+
+<ul class="place-list">
+    <li class="place-item">
+        <a href="{{ url_for('protea_hotel') }}">Protea Hotel</a>
+    </li>
+    <li class="place-item">
+        <a href="{{ url_for('atlantis_dunes') }}">Atlantis Dunes AirBnB</a>
+    </li>
+    <li class="place-item">
+        <a href="{{ url_for('margot_hotel') }}">Margot Hotel</a>
+    </li>
+</ul>
+
+</body>
+</html>

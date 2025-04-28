@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+    body {
+        background-color: lightblue;
+        font-family: Arial, sans-serif;
+        color: #333333;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        text-align: center;
+        padding-top: 30px;
+    }
+    .city-list {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        list-style-type: none;
+        padding: 0;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+    .city-item {
+        text-align: center;
+    }
+    .city-item a {
+        text-decoration: none;
+        color: #222222;
+        display: block;
+    }
+    .city-item a:hover {
+        text-decoration: underline;
+    }
+    .city-item img {
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        display: block;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease;
+    }
+    .city-item img:hover {
+        transform: scale(1.05);
+    }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Ultimate Booking Application</h1>
+    <p>We make holiday booking simple for you.</p>
+    <br>
+    <p>Please select a city:</p>
+</div>
+
+<ul class="city-list">
+    <li class="city-item">
+        <a href="{{ url_for('cape_town') }}">
+            <img src="{{ url_for('static', filename='capetown.jpeg') }}" alt="Cape Town">
+            <div>Cape Town</div>
+        </a>
+    </li>
+    <li class="city-item">
+        <a href="{{ url_for('durban') }}">
+            <img src="{{ url_for('static', filename='durban.jpeg') }}" alt="Durban">
+            <div>Durban</div>
+        </a>
+    </li>
+    <li class="city-item">
+        <a href="{{ url_for('johannesburg') }}">
+            <img src="{{ url_for('static', filename='johannesburg.jpg') }}" alt="Johannesburg">
+            <div>Johannesburg</div>
+        </a>
+    </li>
+</ul>
+
+</body>
+</html>
