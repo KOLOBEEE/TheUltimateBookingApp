@@ -3,8 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Atlantis Dunes AirBnB</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            padding: 20px;
+        }
+        .room {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .room img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+        .room h2 {
+            margin-top: 10px;
+        }
+        .room a {
+            display: inline-block;
+            margin-top: 10px;
+            color: white;
+            background-color: #007bff;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .room a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
+    <h1>Welcome to Atlantis Dunes AirBnB</h1>
+    <p>We have the following rooms available:</p>
 
+    <div class="room">
+        <img src="{{ url_for('static', filename='standard_atlantis_room.jpeg') }}" alt="Standard Room">
+        <h2>The Standard Room - R 300</h2>
+        <a href="{{ url_for('book_standard') }}">Book Now</a>
+    </div>
+
+    <div class="room">
+        <img src="{{ url_for('static', filename='luxury_room_atlantis.jpeg') }}" alt="Luxury Room">
+        <h2>The Luxury Room - R 650</h2>
+        <a href="{{ url_for('book_luxury') }}">Book Now</a>
+    </div>
+
+    <div class="room">
+        <img src="{{ url_for('static', filename='penthouse_atlantis.jpeg') }}" alt="Penthouse">
+        <h2>The Penthouse - R 1350</h2>
+        <a href="{{ url_for('book_penthouse') }}">Book Now</a>
+    </div>
 </body>
 </html>
